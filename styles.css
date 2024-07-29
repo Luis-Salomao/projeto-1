@@ -1,0 +1,233 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    position: static;
+    top: 0;
+    width: 100%;
+    background-color: #157bda;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #157bda;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+/* Estilo para os links do menu de navegação */
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px; /* Adicionar padding padrão */
+    box-sizing: border-box; /* Inclui padding e borda nas dimensões totais */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave para hover */
+}
+
+/* Efeito de hover nos links */
+nav a:hover {
+    background-color: white; /* Alterar cor de fundo no hover */
+    color: #157bda; /* Alterar cor do texto no hover */
+    border-radius: 5px; /* Bordas arredondadas no hover */
+}
+
+
+
+.content {
+    padding: 70px 20px 70px 20px; /* Ajustar o padding conforme necessário */
+}
+
+.main-image {
+   margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.section {
+    padding: 20px 0;
+}
+
+.section:nth-child(odd) {
+    background-color: #f4f4f4;
+}
+
+h2, h3 {
+    color: #333;
+}
+
+p {
+    color: #666;
+    line-height: 1.6;
+    margin: 7px;
+}
+footer{
+    margin: 20px;
+    opacity: 50%;
+    
+}
+
+
+
+.curiosidade-container {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    overflow: hidden; /* Garante que o conteúdo não ultrapasse os limites da div */
+}
+
+.curiosidade-surpresa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #007BFF;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: opacity 0.5s ease;
+    z-index: 1; /* Garante que esta div fique acima */
+    border-radius: 15px;
+    font-size: 25px;
+    color: #f4f4f4;
+}
+.curiosidade-surpresa p{
+    color: #f4f4f4;
+}
+
+.curiosidade-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0; /* Começa invisível */
+    transition: opacity 0.5s ease;
+    z-index: 0; /* Garante que esta div fique abaixo */
+    border-radius: 15px;
+}
+
+.curiosidade-container:hover .curiosidade-surpresa {
+    opacity: 0;
+}
+
+.curiosidade-container:hover .curiosidade-overlay {
+    opacity: 1;
+}
+
+.curiosidades-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as caixas se movam para a linha seguinte se não houver espaço suficiente */
+    gap: 20px; /* Espaçamento entre as caixas */
+    justify-content: center; /* Centraliza as caixas horizontalmente */
+    margin: 20px;
+    align-items: center;
+}
+
+@media (min-width: 1024px) {
+    body{
+        font-size: 20px;
+    }
+    li{
+        margin: 15px;
+    }
+    header {
+        padding: 15px 0; /* Mais espaço no header para telas muito grandes */
+    }
+
+    nav {
+        display: none; /* Esconde o menu de navegação na versão de PC */
+    }
+
+    footer {
+        background-color: #007BFF;
+        display: flex; /* Flexbox para footer */
+        justify-content: center; /* Centraliza o conteúdo do footer */
+        align-items: center; /* Alinha verticalmente o conteúdo */
+        width: 100%;
+        padding: 10px 0;
+        font-size: 14px;
+        color: white;
+        position: static;
+       opacity: 100%;
+       margin-bottom: 0;
+    }
+
+    #resumo {
+        display: flex; /* Usa Flexbox para alinhar a imagem e o texto */
+        align-items: center; /* Alinha verticalmente no centro */
+        justify-content: center; /* Alinha horizontalmente no centro */
+        gap: 20px; /* Espaçamento entre a imagem e o texto */
+        text-align: center; /* Centraliza o texto horizontalmente */
+        
+        flex-direction: row; /* Garante que a imagem e o texto estejam na mesma linha */
+        margin: 5px;
+    }
+    
+
+    .main-image{
+        margin: 20px;
+    }
+    
+
+    #resumo .main-image {
+        max-width: 50%; /* Ajusta a largura máxima da imagem */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+
+    #resumo .text {
+        margin: 0; /* Remove margens adicionais se houver */
+    }
+    
+    #curi {
+        display: flex; /* Usa Flexbox para organizar os elementos internos */
+        flex-direction: row; /* Organiza os elementos em linha */
+        justify-content: space-between; /* Espaça os elementos igualmente */
+        padding: 20px; /* Adiciona espaçamento interno */
+    }
+
+    #curi .text-content {
+        flex: 1; /* Permite que o texto ocupe o espaço disponível */
+        margin-right: 20px; /* Espaçamento à direita do texto */
+    }
+
+    #curi .curiosidades-container {
+        display: flex; /* Usa Flexbox para organizar as curiosidades */
+        flex-direction: column; /* Organiza as curiosidades em coluna */
+        gap: 20px; /* Espaçamento entre as curiosidades */
+        flex: 1; /* Permite que as curiosidades ocupem o espaço disponível */
+    }
+
+    #curi .curiosidade-container {
+        display: flex; /* Usa Flexbox para organizar os elementos internos da curiosidade */
+        flex-direction: column; /* Organiza os elementos em coluna */
+        align-items: center; /* Centraliza os itens horizontalmente */
+        position: relative; /* Necessário para a sobreposição */
+        max-width: 300px; /* Define uma largura máxima para as caixas de curiosidade */
+    }
+    .texos-curi{
+        display: block;
+    }
+}
