@@ -25,31 +25,30 @@ nav {
     z-index: 1000;
 }
 
-/* Estilo para os links do menu de navegação */
+
 nav a {
     color: white;
     text-decoration: none;
     font-size: 18px;
-    padding: 5px 10px; /* Adicionar padding padrão */
-    box-sizing: border-box; /* Inclui padding e borda nas dimensões totais */
-    transition: background-color 0.3s, color 0.3s; /* Transição suave para hover */
+    padding: 5px 10px; 
+    box-sizing: border-box; 
+    transition: background-color 0.3s, color 0.3s; 
 }
 
-/* Efeito de hover nos links */
+
 nav a:hover {
-    background-color: white; /* Alterar cor de fundo no hover */
-    color: #157bda; /* Alterar cor do texto no hover */
-    border-radius: 5px; /* Bordas arredondadas no hover */
+    background-color: white;
+    color: #157bda; 
+    border-radius: 5px; 
 }
 
 
 
 .content {
-    padding: 70px 20px 70px 20px; /* Ajustar o padding conforme necessário */
-}
+    padding: 70px 20px 70px 20px; 
 
 .main-image {
-   margin-top: 20px;
+    margin-top: 20px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -86,7 +85,7 @@ footer{
     position: relative;
     width: 300px;
     height: 200px;
-    overflow: hidden; /* Garante que o conteúdo não ultrapasse os limites da div */
+    overflow: hidden; 
 }
 
 .curiosidade-surpresa {
@@ -102,7 +101,7 @@ footer{
     align-items: center;
     text-align: center;
     transition: opacity 0.5s ease;
-    z-index: 1; /* Garante que esta div fique acima */
+    z-index: 1; 
     border-radius: 15px;
     font-size: 25px;
     color: #f4f4f4;
@@ -123,9 +122,9 @@ footer{
     justify-content: center;
     align-items: center;
     text-align: center;
-    opacity: 0; /* Começa invisível */
+    opacity: 0; 
     transition: opacity 0.5s ease;
-    z-index: 0; /* Garante que esta div fique abaixo */
+    z-index: 0; 
     border-radius: 15px;
 }
 
@@ -139,9 +138,9 @@ footer{
 
 .curiosidades-container {
     display: flex;
-    flex-wrap: wrap; /* Permite que as caixas se movam para a linha seguinte se não houver espaço suficiente */
-    gap: 20px; /* Espaçamento entre as caixas */
-    justify-content: center; /* Centraliza as caixas horizontalmente */
+    flex-wrap: wrap;
+    gap: 20px; 
+    justify-content: center; 
     margin: 20px;
     align-items: center;
 }
@@ -154,35 +153,34 @@ footer{
         margin: 15px;
     }
     header {
-        padding: 15px 0; /* Mais espaço no header para telas muito grandes */
+        padding: 15px 0; 
     }
 
     nav {
-        display: none; /* Esconde o menu de navegação na versão de PC */
+        display: none; 
     }
 
     footer {
         background-color: #007BFF;
-        display: flex; /* Flexbox para footer */
-        justify-content: center; /* Centraliza o conteúdo do footer */
-        align-items: center; /* Alinha verticalmente o conteúdo */
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
         width: 100%;
         padding: 10px 0;
         font-size: 14px;
         color: white;
         position: static;
-       opacity: 100%;
-       margin-bottom: 0;
+        opacity: 100%;
+        margin-bottom: 0;
     }
 
     #resumo {
-        display: flex; /* Usa Flexbox para alinhar a imagem e o texto */
-        align-items: center; /* Alinha verticalmente no centro */
-        justify-content: center; /* Alinha horizontalmente no centro */
-        gap: 20px; /* Espaçamento entre a imagem e o texto */
-        text-align: center; /* Centraliza o texto horizontalmente */
-        
-        flex-direction: row; /* Garante que a imagem e o texto estejam na mesma linha */
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        gap: 20px; 
+        text-align: center; 
+        flex-direction: row; 
         margin: 5px;
     }
     
@@ -193,41 +191,42 @@ footer{
     
 
     #resumo .main-image {
-        max-width: 50%; /* Ajusta a largura máxima da imagem */
-        height: auto; /* Mantém a proporção da imagem */
+        max-width: 50%; 
+        height: auto; 
     }
 
     #resumo .text {
-        margin: 0; /* Remove margens adicionais se houver */
+        margin: 0; 
     }
     
     #curi {
-        display: flex; /* Usa Flexbox para organizar os elementos internos */
-        flex-direction: row; /* Organiza os elementos em linha */
-        justify-content: space-between; /* Espaça os elementos igualmente */
-        padding: 20px; /* Adiciona espaçamento interno */
+        display: flex; 
+        flex-direction: row; 
+        justify-content: space-between; 
+        padding: 20px; 
     }
 
     #curi .text-content {
-        flex: 1; /* Permite que o texto ocupe o espaço disponível */
-        margin-right: 20px; /* Espaçamento à direita do texto */
+        flex: 1; 
+        margin-right: 20px; 
     }
 
     #curi .curiosidades-container {
-        display: flex; /* Usa Flexbox para organizar as curiosidades */
-        flex-direction: column; /* Organiza as curiosidades em coluna */
-        gap: 20px; /* Espaçamento entre as curiosidades */
-        flex: 1; /* Permite que as curiosidades ocupem o espaço disponível */
+        display: flex; 
+        flex-direction: column; 
+        gap: 20px; 
+        flex: 1; 
     }
 
     #curi .curiosidade-container {
-        display: flex; /* Usa Flexbox para organizar os elementos internos da curiosidade */
-        flex-direction: column; /* Organiza os elementos em coluna */
-        align-items: center; /* Centraliza os itens horizontalmente */
-        position: relative; /* Necessário para a sobreposição */
-        max-width: 300px; /* Define uma largura máxima para as caixas de curiosidade */
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        position: relative;
+        max-width: 300px; 
     }
     .texos-curi{
         display: block;
     }
+}
 }
